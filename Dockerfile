@@ -10,5 +10,8 @@ COPY . /app
 # Install the application dependencies
 RUN pip install -r requirements.txt
 
+# Make port 5000 available to the world outside this container
+EXPOSE 5000
+
 # Define the entry point for the container
 CMD ["flask", "run", "--host=0.0.0.0"]
