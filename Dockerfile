@@ -12,6 +12,8 @@ RUN pip install -r requirements.txt
 
 # Make port 5000 available to the world outside this container
 EXPOSE 5000
+# Define environment variable to enable debug mode
+ENV FLASK_ENV=development
 
 # Define the entry point for the container
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["python", "run.py"]
