@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Rules</title>
+</head>
+<body>
+    <h1>Rules Created</h1>
+    <ul>
+        {% for rule in rules %}
+            <li>{{ rule }}</li>
+        {% endfor %}
+    </ul>
+    <!-- Button to generate contrapositions -->
+    <form action="/generate-contrapositions" method="post">
+        <button type="submit">Generate Contrapositions for Strict Rules</button>
+    </form>
+</body>
+</html>
