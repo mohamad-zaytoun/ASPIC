@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASPIC+ Knowledge Base Editor</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        label { display: block; margin-top: 10px; }
+        textarea, input, select { margin-top: 5px; }
+        button { margin-top: 10px; }
+    </style>
+</head>
+<body>
+<h1>ASPIC+ Knowledge Base Editor</h1>
+<p>Enter the details of the rule below:</p>
+<form action="/" method="post">
+    <div>
+        <label for="premises">Premises (comma-separated, leave empty if none):</label>
+        <input type="text" id="premises" name="premises" placeholder="a, !b, c">
+    </div>
+    <div>
+        <label for="conclusion">Conclusion:</label>
+        <input type="text" id="conclusion" name="conclusion" required>
+    </div>
+    <div>
+        <label for="is_defeasible">Is Defeasible:</label>
+        <select id="is_defeasible" name="is_defeasible">
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+        </select>
+    </div>
+    <div>
+        <label for="reference">Reference:</label>
+        <input type="text" id="reference" name="reference" required>
+    </div>
+    <button type="submit">Create Rule</button>
+</form>
+<form action="/view-rules" method="get">
+    <button type="submit">Finish and View Rules</button>
+</form>
+</body>
+</html>
+
